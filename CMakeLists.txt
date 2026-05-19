@@ -7,4 +7,6 @@ add_executable(dream_apartment_simulator main.cpp
         Entity.cpp
         Entity.h
         Item.cpp
-        Item.h)
+        Item.h
+        Resident.cpp
+        Resident.h)
