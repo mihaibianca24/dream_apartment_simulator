@@ -13,4 +13,6 @@ add_executable(dream_apartment_simulator main.cpp
         Furniture.cpp
         Furniture.h
         Bed.cpp
-        Bed.h)
+        Bed.h
+        Sofa.cpp
+        Sofa.h)
