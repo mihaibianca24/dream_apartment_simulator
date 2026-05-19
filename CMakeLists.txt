@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(dream_apartment_simulator main.cpp
         Entity.cpp
-        Entity.h)
+        Entity.h
+        Item.cpp
+        Item.h)
