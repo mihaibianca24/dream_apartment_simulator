@@ -9,4 +9,6 @@ add_executable(dream_apartment_simulator main.cpp
         Item.cpp
         Item.h
         Resident.cpp
-        Resident.h)
+        Resident.h
+        Furniture.cpp
+        Furniture.h)
