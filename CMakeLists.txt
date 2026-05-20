@@ -23,4 +23,6 @@ add_executable(dream_apartment_simulator main.cpp
         Appliance.cpp
         Appliance.h
         Desk.cpp
-        Desk.h)
+        Desk.h
+        Computer.cpp
+        Computer.h)
