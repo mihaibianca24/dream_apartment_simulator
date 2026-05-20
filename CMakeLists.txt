@@ -19,4 +19,6 @@ add_executable(dream_apartment_simulator main.cpp
         Fridge.cpp
         Fridge.h
         Shower.cpp
-        Shower.h)
+        Shower.h
+        Appliance.cpp
+        Appliance.h)
