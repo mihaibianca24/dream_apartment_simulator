@@ -24,4 +24,10 @@ add_executable(dream_apartment_simulator
         Painting.cpp
         Room.cpp
         Room.h
+        Bedroom.cpp
+        Bedroom.h
+        Livingroom.cpp
+        Livingroom.h
+        Bathroom.cpp
+        Bathroom.h
 )
