@@ -18,6 +18,7 @@ public:
     virtual ~Decoration();
 
     int getHappinessBonus() const;
+    int getComfortBonus() const;
 
     virtual void dailyEffect(Resident& resident) = 0;
     void applyEffect(Resident& resident) override;

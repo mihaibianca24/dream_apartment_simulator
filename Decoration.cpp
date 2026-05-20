@@ -25,6 +25,10 @@ int Decoration::getHappinessBonus() const {
     return happinessBonus;
 }
 
+int Decoration::getComfortBonus() const {
+    return comfortBonus;
+}
+
 void Decoration::applyEffect(Resident& resident) {
     dailyEffect(resident);
 }
