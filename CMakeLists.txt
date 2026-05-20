@@ -27,4 +27,6 @@ add_executable(dream_apartment_simulator main.cpp
         Computer.cpp
         Computer.h
         TV.cpp
-        TV.h)
+        TV.h
+        Decoration.cpp
+        Decoration.h)
