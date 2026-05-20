@@ -24,6 +24,7 @@ public:
     virtual void applyEffect(Resident &resident)=0;
     std::string getDescription() const override=0;
     void update(int deltaSeconds) override {}
+    virtual int getComfortBonus() const { return 0; }
 
 };
 
