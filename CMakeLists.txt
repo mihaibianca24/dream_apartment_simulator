@@ -39,4 +39,6 @@ add_executable(dream_apartment_simulator
         ItemFactory.h
         Shop.cpp
         Shop.h
+        TimeSystem.cpp
+        TimeSystem.h
 )
