@@ -37,4 +37,6 @@ add_executable(dream_apartment_simulator
         Inventory.h
         ItemFactory.cpp
         ItemFactory.h
+        Shop.cpp
+        Shop.h
 )
