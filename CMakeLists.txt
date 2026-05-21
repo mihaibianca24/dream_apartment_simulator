@@ -32,4 +32,6 @@ add_executable(dream_apartment_simulator
         Bathroom.h
         Apartment.cpp
         Apartment.h
+        InsufficientFundsException.h
+        SlotOccupiedException.h
 )

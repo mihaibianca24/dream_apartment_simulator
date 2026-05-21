@@ -12,3 +12,4 @@ Entity::Entity(const std::string &name) {
 std::string Entity::getName() const{
     return name;
 }
+Entity::~Entity() = default;

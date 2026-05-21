@@ -4,6 +4,7 @@
 
 #include "Room.h"
 #include "Resident.h"
+#include "SlotOccupiedException.h"
 #include <algorithm>
 
 Room::Room(const std::string& name, int maxSlots)
@@ -27,12 +28,11 @@ int Room::getOccupiedSlots() const {
 
 bool Room::addItem(std::unique_ptr<Item> item) {
     if (getOccupiedSlots() >= maxSlots) {
-        throw std::runtime_error("No available slots in " + getName());
+        throw SlotOccupiedException(getName());
     }
     slots.push_back(std::move(item));
     return true;
 }
-
 std::unique_ptr<Item> Room::removeItem(const std::string& itemName) {
     for (auto it = slots.begin(); it != slots.end(); ++it) {
         if ((*it) && (*it)->getName() == itemName) {
