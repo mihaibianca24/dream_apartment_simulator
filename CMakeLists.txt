@@ -30,4 +30,6 @@ add_executable(dream_apartment_simulator
         Livingroom.h
         Bathroom.cpp
         Bathroom.h
+        Apartment.cpp
+        Apartment.h
 )
