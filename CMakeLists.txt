@@ -34,4 +34,5 @@ add_executable(dream_apartment_simulator
         Apartment.h
         InsufficientFundsException.h
         SlotOccupiedException.h
+        Inventory.h
 )

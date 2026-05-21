@@ -48,15 +48,31 @@ int Resident::getMoney() const { return money; }
 
 void Resident::modifyEnergy(int amount) {
     energy = std::clamp(energy + amount, 0, 100);
+    if (amount > 0)
+        activityLog.add("Energy +" + std::to_string(amount));
+    else
+        activityLog.add("Energy " + std::to_string(amount));
 }
 void Resident::modifyHunger(int amount) {
     hunger = std::clamp(hunger + amount, 0, 100);
+    if (amount > 0)
+        activityLog.add("Energy +" + std::to_string(amount));
+    else
+        activityLog.add("Energy " + std::to_string(amount));
 }
 void Resident::modifyHappiness(int amount) {
     happiness = std::clamp(happiness + amount, 0, 100);
+    if (amount > 0)
+        activityLog.add("Energy +" + std::to_string(amount));
+    else
+        activityLog.add("Energy " + std::to_string(amount));
 }
 void Resident::modifyHygiene(int amount) {
     hygiene = std::clamp(hygiene + amount, 0, 100);
+    if (amount > 0)
+        activityLog.add("Energy +" + std::to_string(amount));
+    else
+        activityLog.add("Energy " + std::to_string(amount));
 }
 
 void Resident::addMoney(int amount) {
@@ -89,4 +105,12 @@ std::string Resident::getDescription() const {
 
 bool Resident::isDead() const {
     return energy <= 0;
+}
+
+void Resident::addLog(const std::string& message) {
+    activityLog.add(message);
+}
+
+Inventory<std::string>& Resident::getActivityLog() {
+    return activityLog;
 }

@@ -5,6 +5,7 @@
 #ifndef DREAM_APARTMENT_SIMULATOR_RESIDENT_H
 #define DREAM_APARTMENT_SIMULATOR_RESIDENT_H
 #include "Entity.h"
+#include "Inventory.h"
 
 class Resident : public Entity {
     private:
@@ -13,7 +14,7 @@ class Resident : public Entity {
     int happiness;
     int hygiene;
     int money;
-
+    Inventory<std::string> activityLog;
 public:
     Resident();
     Resident(const std::string& name);
@@ -37,6 +38,9 @@ public:
     void update(int deltaSeconds) override;
     std::string getDescription() const override;
     bool isDead() const;
+
+    void addLog(const std::string& message);
+    Inventory<std::string>& getActivityLog();
 };
 
 
