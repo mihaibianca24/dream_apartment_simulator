@@ -41,4 +41,7 @@ add_executable(dream_apartment_simulator
         Shop.h
         TimeSystem.cpp
         TimeSystem.h
+        EventSystem.cpp
+        EventSystem.h
+        IEventListener.h
 )
