@@ -12,6 +12,7 @@ Resident :: Resident() : Entity("Unknown"){
     this->happiness=100;
     this->hygiene=100;
     this->money=500;
+    this->tickAccumulator=0;
 }
 Resident :: Resident(const std::string &name) : Entity(name){
     this->energy=100;
@@ -19,6 +20,7 @@ Resident :: Resident(const std::string &name) : Entity(name){
     this->happiness=100;
     this->hygiene=100;
     this->money=500;
+    this->tickAccumulator=0;
 }
 Resident :: Resident(const Resident &resident) : Entity(resident){
     this->energy=resident.energy;
@@ -26,6 +28,7 @@ Resident :: Resident(const Resident &resident) : Entity(resident){
     this->happiness=resident.happiness;
     this->hygiene=resident.hygiene;
     this->money=resident.money;
+    this->tickAccumulator=resident.tickAccumulator;
 }
 Resident& Resident::operator=(const Resident& other) {
     if (this != &other) {
@@ -35,6 +38,7 @@ Resident& Resident::operator=(const Resident& other) {
         happiness = other.happiness;
         hygiene = other.hygiene;
         money = other.money;
+        tickAccumulator = other.tickAccumulator;
     }
     return *this;
 }
@@ -72,10 +76,14 @@ bool Resident::spendMoney(int amount) {
 }
 
 void Resident::update(int deltaSeconds) {
-    modifyHunger(-1 * deltaSeconds);
-    modifyHygiene(-1 * deltaSeconds);
-    modifyEnergy(-1 * deltaSeconds);
-    modifyHappiness(-1 * deltaSeconds);
+    tickAccumulator += deltaSeconds;
+    if (tickAccumulator >= 5) {
+        modifyHunger(-1);
+        modifyHygiene(-1);
+        modifyEnergy(-1);
+        modifyHappiness(-1);
+        tickAccumulator = 0;
+    }
 }
 
 std::string Resident::getDescription() const {

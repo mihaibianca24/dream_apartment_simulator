@@ -15,6 +15,7 @@ class Resident : public Entity {
     int hygiene;
     int money;
     Inventory<std::string> activityLog;
+    int tickAccumulator;
 public:
     Resident();
     Resident(const std::string& name);
@@ -33,7 +34,7 @@ public:
     void modifyHappiness(int amount);
     void modifyHygiene(int amount);
     void addMoney(int amount);
-    bool spendMoney(int amount); // returneaza false daca nu are destui bani
+    bool spendMoney(int amount);
 
     void update(int deltaSeconds) override;
     std::string getDescription() const override;

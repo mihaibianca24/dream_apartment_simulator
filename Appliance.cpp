@@ -36,5 +36,7 @@ void Appliance::setIsActive(bool value) {
 }
 
 void Appliance::applyEffect(Resident& resident) {
-    if (isActive) activate(resident);
+    setIsActive(true);
+    activate(resident);
+    setIsActive(false);
 }

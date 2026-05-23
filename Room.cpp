@@ -81,3 +81,6 @@ std::string Room::getDescription() const {
     }
     return desc;
 }
+const std::vector<std::unique_ptr<Item>>& Room::getSlots() const {
+    return slots;
+}

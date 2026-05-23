@@ -30,10 +30,19 @@ void Apartment::update(int deltaSeconds) {
 }
 
 int Apartment::getDreamLevel() const {
-    int total = bedroom->getComfortScore() +
-                livingRoom->getComfortScore() +
-                bathroom->getComfortScore();
-    return std::min(100, (total * 100) / 300);
+    int itemScore = bedroom->getComfortScore() +
+                    livingRoom->getComfortScore() +
+                    bathroom->getComfortScore();
+
+    int statScore = (resident.getEnergy() +
+                     resident.getHunger() +
+                     resident.getHappiness() +
+                     resident.getHygiene()) / 4;
+
+    int normalizedItems = (itemScore * 100) / 98;
+    int finalScore = (normalizedItems + statScore) / 2;
+
+    return std::min(100, finalScore);
 }
 
 std::string Apartment::getDescription() const {

@@ -31,6 +31,8 @@ public:
 
     void update(int deltaSeconds) override;
     std::string getDescription() const override;
+
+    const std::vector<std::unique_ptr<Item>>& getSlots() const;
 };
 
 #endif //DREAM_APARTMENT_SIMULATOR_ROOM_H

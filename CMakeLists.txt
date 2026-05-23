@@ -46,4 +46,6 @@ add_executable(dream_apartment_simulator
         IEventListener.h
         GameEngine.cpp
         GameEngine.h
+        ConsoleUI.cpp
+        ConsoleUI.h
 )
