@@ -18,13 +18,19 @@ struct ShopEntry {
 class Shop {
 private:
     Inventory<ShopEntry> catalog;
-public:
     Shop();
+
+    static Shop* instance;
+
+public:
+    static Shop& getInstance();
 
     void addEntry(const std::string& itemType, const std::string& description, int cost);
     std::unique_ptr<Item> buyItem(const std::string& itemType, Resident& resident);
     void printCatalog() const;
-
     const Inventory<ShopEntry>& getCatalog() const;
+
+    Shop(const Shop&) = delete;
+    Shop& operator=(const Shop&) = delete;
 };
 #endif //DREAM_APARTMENT_SIMULATOR_SHOP_H

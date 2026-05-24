@@ -34,6 +34,8 @@ int Apartment::getDreamLevel() const {
                     livingRoom->getComfortScore() +
                     bathroom->getComfortScore();
 
+    if (itemScore == 0) return 0;
+
     int statScore = (resident.getEnergy() +
                      resident.getHunger() +
                      resident.getHappiness() +

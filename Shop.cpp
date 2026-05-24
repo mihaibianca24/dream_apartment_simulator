@@ -51,3 +51,12 @@ void Shop::printCatalog() const {
 const Inventory<ShopEntry>& Shop::getCatalog() const {
     return catalog;
 }
+
+Shop* Shop::instance = nullptr;
+
+Shop& Shop::getInstance() {
+    if (instance == nullptr) {
+        instance = new Shop();
+    }
+    return *instance;
+}

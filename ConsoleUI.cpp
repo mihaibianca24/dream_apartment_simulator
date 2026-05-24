@@ -39,7 +39,6 @@ void ConsoleUI::renderIntro() {
     std::cout << "  WARNING:\n";
     std::cout << "  - Stats decrease automatically over time\n";
     std::cout << "  - If Energy reaches 0 = Game Over!\n\n";
-    std::cout << "  Enter your character's name: ";
 }
 
 void ConsoleUI::renderGameOver() {

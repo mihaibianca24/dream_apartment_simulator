@@ -9,6 +9,7 @@ GameEngine::GameEngine(const std::string& residentName,
                        const std::string& apartmentName)
     : resident(residentName),
       apartment(apartmentName, resident),
+      shop(Shop::getInstance()),  // ← Singleton
       isRunning(false),
       dayCount(1),
       secondCounter(0) {
@@ -53,7 +54,7 @@ void GameEngine::tick(int deltaSeconds) {
         isRunning = false;
         std::cout << "GAME OVER! " << resident.getName()
                   << " ran out of energy on day "
-                  << dayCount << "\n";
+                << dayCount << "\n";
         timeSystem->stop();
     }
 }

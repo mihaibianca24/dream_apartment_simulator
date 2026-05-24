@@ -17,7 +17,7 @@ class GameEngine : public IEventListener {
 private:
     Resident resident;
     Apartment apartment;
-    Shop shop;
+    Shop& shop;
     std::unique_ptr<TimeSystem> timeSystem;
     std::unique_ptr<EventSystem> eventSystem;
     bool isRunning;
