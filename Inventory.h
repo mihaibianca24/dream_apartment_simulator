@@ -5,7 +5,6 @@
 #ifndef DREAM_APARTMENT_SIMULATOR_INVENTORY_H
 #define DREAM_APARTMENT_SIMULATOR_INVENTORY_H
 #include <vector>
-#include <string>
 #include <stdexcept>
 
 template<typename T>

@@ -9,7 +9,7 @@ GameEngine::GameEngine(const std::string& residentName,
                        const std::string& apartmentName)
     : resident(residentName),
       apartment(apartmentName, resident),
-      shop(Shop::getInstance()),  // ← Singleton
+      shop(Shop::getInstance()),
       isRunning(false),
       dayCount(1),
       secondCounter(0) {

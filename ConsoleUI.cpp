@@ -193,7 +193,6 @@ void ConsoleUI::menuUseItem() {
         return;
     }
 
-    // afisam obiectele din camera
     const auto& slots = room->getSlots();
     if (slots.empty()) {
         std::cout << "\n  This room is empty! Buy some items first.\n";
