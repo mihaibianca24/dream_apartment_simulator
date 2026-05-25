@@ -43,7 +43,6 @@ void GameEngine::tick(int deltaSeconds) {
 
     secondCounter += deltaSeconds;
 
-    // 60 secunde reale = 1 zi in joc
     if (secondCounter >= 60) {
         secondCounter = 0;
         dayCount++;
